@@ -1,0 +1,524 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Transitions */
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/heroimage.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  animation: transitionIn 0.9s;
+}
+/* Position text in the middle of the page/image */
+.hero-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 0px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 3em;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 9vw;
+  animation: transitionIn 0.8s;
+}
+
+.card:hover,
+.card-2:hover,
+.card-3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  max-width: 488px;
+}
+
+.rainDaysImg,
+.ScienceMuseumImg,
+.LeagueBlogImg {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.projectLink {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* Card 2 */
+
+.card-2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  max-width: 488px;
+}
+
+.projectLink {
+  color: grey;
+  font-size: 22px;
+}
+
+.card-2 button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card-2 button:hover {
+  opacity: 0.7;
+}
+
+/* Card 3*/
+
+.card-3 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  max-width: 488px;
+}
+
+.projectLink {
+  color: grey;
+  font-size: 22px;
+}
+
+.card-3 button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card-3 button:hover {
+  opacity: 0.7;
+}
+
+/* Footer*/
+
+#footer {
+  padding: 1.2em;
+
+  background-color: red;
+  background-color: #6979f8;
+  text-align: center;
+  animation: transitionIn 0.8s;
+}
+
+#footer img {
+  width: 12%;
+}
+
+.arrowImg {
+  display: none;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/heroimage.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .arrowImg {
+    display: block;
+  }
+
+  h1 {
+    white-space: pre;
+  }
+  /* Position text in the middle of the page/image */
+  .hero-text {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 0px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3em;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+
+  .card:hover,
+  .card-2:hover,
+  .card-3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    max-width: 488px;
+  }
+
+  .rainDaysImg {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  .rainDaysImg-2 {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .projectLink {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  /* Card 2 */
+
+  .card-2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    max-width: 488px;
+  }
+
+  .projectLink {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card-2 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card-2 button:hover {
+    opacity: 0.7;
+  }
+
+  /* Card 3*/
+
+  .card-3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    max-width: 488px;
+  }
+
+  .projectLink {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card-3 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card-3 button:hover {
+    opacity: 0.7;
+  }
+
+  /* Footer*/
+
+  #footer {
+    padding: 1.2em;
+
+    background-color: red;
+    background-color: #6979f8;
+    text-align: center;
+  }
+
+  #footer img {
+    width: 4%;
+  }
+
+  .arrowImg {
+    position: absolute;
+    top: 92%;
+    left: 48%;
+    width: 2.6%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/heroimage.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  /* Position text in the middle of the page/image */
+  .hero-text {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 0px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3em;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+
+  .card:hover,
+  .card-2:hover,
+  .card-3:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    max-width: 488px;
+  }
+
+  .rainDaysImg {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  .rainDaysImg-2 {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .projectLink {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  /* Card 2 */
+
+  .card-2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    max-width: 488px;
+  }
+
+  .projectLink {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card-2 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card-2 button:hover {
+    opacity: 0.7;
+  }
+
+  /* Card 3*/
+
+  .card-3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    max-width: 488px;
+  }
+
+  .projectLink {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card-3 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card-3 button:hover {
+    opacity: 0.7;
+  }
+
+  /* Footer*/
+
+  #footer {
+    padding: 1.2em;
+
+    background-color: red;
+    background-color: #6979f8;
+    text-align: center;
+  }
+
+  #footer img {
+    width: 4%;
+  }
+
+  .arrowImg {
+    position: absolute;
+    top: 92%;
+    left: 47%;
+    width: 2.6%;
+    display: block;
+  }
+}
